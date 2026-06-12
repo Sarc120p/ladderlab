@@ -1,0 +1,31 @@
+{
+  "rungs": [
+    {
+      "comment": "Green lamp on when system is running (simplified traffic light)",
+      "contacts": [
+        { "tag": "START_BUTTON", "type": "NO" },
+        { "tag": "STOP_BUTTON", "type": "NC" },
+        { "tag": "EMERGENCY_STOP", "type": "NC" }
+      ],
+      "coil": "GREEN_LAMP"
+    },
+    {
+      "comment": "Red lamp on when green is off",
+      "contacts": [
+        { "tag": "GREEN_LAMP", "type": "NC" }
+      ],
+      "coil": "RED_LAMP"
+    },
+    {
+      "comment": "Timer to cycle the lights (placeholder – would need TOF/TON logic in real implementation)",
+      "contacts": [
+        { "tag": "GREEN_LAMP", "type": "NO" }
+      ],
+      "timer": {
+        "name": "TON_CONVEYOR_DELAY",
+        "type": "TON",
+        "preset": 10.0
+      }
+    }
+  ]
+}

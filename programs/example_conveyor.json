@@ -1,0 +1,53 @@
+{
+  "rungs": [
+    {
+      "comment": "Start/Stop latch with holding contact and end limit switch",
+      "contacts": [
+        [
+          { "tag": "START_BUTTON", "type": "NO" },
+          { "tag": "CONVEYOR_MOTOR", "type": "NO" }
+        ],
+        { "tag": "STOP_BUTTON", "type": "NC" },
+        { "tag": "EMERGENCY_STOP", "type": "NC" },
+        { "tag": "END_LIMIT_SWITCH", "type": "NC" }
+      ],
+      "coil": "CONVEYOR_MOTOR"
+    },
+    {
+      "comment": "TON – delay before confirming motor is running",
+      "contacts": [
+        { "tag": "CONVEYOR_MOTOR", "type": "NO" }
+      ],
+      "timer": {
+        "name": "TON_CONVEYOR_DELAY",
+        "type": "TON",
+        "preset": 3.0
+      }
+    },
+    {
+      "comment": "CTU – count parts when sensor detects",
+      "contacts": [
+        { "tag": "PART_SENSOR", "type": "NO" }
+      ],
+      "counter": {
+        "name": "CTU_PART_COUNT",
+        "type": "CTU",
+        "preset": 10
+      }
+    },
+    {
+      "comment": "Green lamp on when motor is running",
+      "contacts": [
+        { "tag": "CONVEYOR_MOTOR", "type": "NO" }
+      ],
+      "coil": "GREEN_LAMP"
+    },
+    {
+      "comment": "Red lamp on when part count reached",
+      "contacts": [
+        { "tag": "CTU_PART_COUNT", "type": "NO" }
+      ],
+      "coil": "RED_LAMP"
+    }
+  ]
+}

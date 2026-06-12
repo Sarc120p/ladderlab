@@ -1,0 +1,50 @@
+{
+  "rungs": [
+    {
+      "comment": "Start/Stop latch for M0 (cycle active)",
+      "contacts": [
+        [
+          { "tag": "START_BUTTON", "type": "NO" },
+          { "tag": "M0", "type": "NO" }
+        ],
+        { "tag": "STOP_BUTTON", "type": "NC" },
+        { "tag": "EMERGENCY_STOP", "type": "NC" }
+      ],
+      "coil": "M0"
+    },
+    {
+      "comment": "Valve opens when M0 is active AND level is low (NC contact)",
+      "contacts": [
+        { "tag": "M0", "type": "NO" },
+        { "tag": "LEVEL_SENSOR", "type": "NC" }
+      ],
+      "coil": "VALVE_OPEN"
+    },
+    {
+      "comment": "Motor runs when M0 is active AND level is high (NO contact)",
+      "contacts": [
+        { "tag": "M0", "type": "NO" },
+        { "tag": "LEVEL_SENSOR", "type": "NO" }
+      ],
+      "coil": "MOTOR_MAIN"
+    },
+    {
+      "comment": "TON – delay before confirming motor is running (optional)",
+      "contacts": [
+        { "tag": "MOTOR_MAIN", "type": "NO" }
+      ],
+      "timer": {
+        "name": "TON_MOTOR_DELAY",
+        "type": "TON",
+        "preset": 1.0
+      }
+    },
+    {
+      "comment": "Alarm light when level stays high (placeholder)",
+      "contacts": [
+        { "tag": "LEVEL_SENSOR", "type": "NO" }
+      ],
+      "coil": "ALARM_LIGHT"
+    }
+  ]
+}

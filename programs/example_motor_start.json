@@ -1,0 +1,17 @@
+{
+  "rungs": [
+    {
+      "contacts": [
+        [
+          { "tag": "START_BUTTON", "type": "NO" },
+          { "tag": "STOP_BUTTON", "type": "NC" }
+        ],
+        [
+          { "tag": "MOTOR_MAIN", "type": "NO" },
+          { "tag": "STOP_BUTTON", "type": "NC" }
+        ]
+      ],
+      "coil": "MOTOR_MAIN"
+    }
+  ]
+}
