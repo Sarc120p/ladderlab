@@ -74,32 +74,32 @@ Unlike traditional PLC software, LadderLab runs entirely in software, making it 
 
 ## Features
 ```
-| Feature | Details |
-|----------|----------|
-| PLC Scan Cycle | Realistic Read → Execute → Write execution loop |
-| Ladder Logic Engine | Supports NO/NC contacts, coils, timers and counters |
-| Real‑Time Dashboard | Live tag updates via WebSockets |
-| Visual Ladder Editor | Drag‑and‑drop blocks on a free‑canvas with zoom/pan |
-| Live Power Flow | Active wires and blocks highlight during execution |
-| Industrial Simulations | Conveyor belt, tank process and traffic light |
-| Program Persistence | Save, load and manage Ladder programs (PostgreSQL) |
-| Alarm Manager | Motor faults, sensor timeouts and custom alarms |
-| REST API | Program loading, I/O forcing and diagnostics |
-| Docker Support | Entire system runs through Docker Compose |
+|        Feature         |                   Details                           |
+|------------------------|-----------------------------------------------------|
+| PLC Scan Cycle         | Realistic Read → Execute → Write execution loop     |
+| Ladder Logic Engine    | Supports NO/NC contacts, coils, timers and counters |
+| Real‑Time Dashboard    | Live tag updates via WebSockets                     |
+| Visual Ladder Editor   | Drag‑and‑drop blocks on a free‑canvas with zoom/pan |
+| Live Power Flow        | Active wires and blocks highlight during execution  |
+| Industrial Simulations | Conveyor belt, tank process and traffic light       |
+| Program Persistence    | Save, load and manage Ladder programs (PostgreSQL)  |
+| Alarm Manager          | Motor faults, sensor timeouts and custom alarms     |
+| REST API               | Program loading, I/O forcing and diagnostics        |
+| Docker Support         | Entire system runs through Docker Compose           |
 
 ```
 
 ## Project Statistics
 ```
-| Metric | Value |
-|--------|-------|
-| PLC Instructions | 10+ |
-| Simulations | 3 (conveyor, tank, traffic light) |
-| Real‑Time Updates | WebSockets |
-| Supported Timers | TON, TOF |
-| Supported Counters | CTU, CTD |
-| Persistence | PostgreSQL |
-| API Documentation | Swagger / OpenAPI |
+|       Metric       |              Value                |
+|--------------------|-----------------------------------|
+| PLC Instructions   | 10+                               |
+| Simulations        | 3 (conveyor, tank, traffic light) |
+| Real‑Time Updates  | WebSockets                        |
+| Supported Timers   | TON, TOF                          |
+| Supported Counters | CTU, CTD                          |
+| Persistence        | PostgreSQL                        |
+| API Documentation  | Swagger / OpenAPI                 |
 ```
 ---
 
@@ -130,13 +130,13 @@ The dashboard loads the **Conveyor** simulation by default.
 
 ### Dashboard Controls
 
-| Button   | Behaviour |
-|----------|-----------|
-| START    | Sends a pulse to the `START_BUTTON` input. Latch circuits keep the motor on. |
-| STOP     | Sends a pulse to `STOP_BUTTON`. Pauses the process but preserves the visual state. |
-| E‑STOP   | Toggles the emergency stop signal. While active, all outputs are forced off. |
-| RESET    | Resets the conveyor visualisation (only works when the motor is stopped). |
-| **Ladder Editor** | Opens the full‑screen visual editor. |
+| Button            | Behaviour                                                                          |
+|-------------------|------------------------------------------------------------------------------------|
+| START             | Sends a pulse to the `START_BUTTON` input. Latch circuits keep the motor on.       |
+| STOP              | Sends a pulse to `STOP_BUTTON`. Pauses the process but preserves the visual state. |
+| E‑STOP            | Toggles the emergency stop signal. While active, all outputs are forced off.       |
+| RESET             | Resets the conveyor visualisation (only works when the motor is stopped).          |
+| **Ladder Editor** | Opens the full‑screen visual editor.                                               |
 
 ### Loading Programs
 
@@ -306,21 +306,6 @@ LadderLab showcases concepts commonly found in industrial automation systems:
 - Docker‑based deployment
 
 The project was developed as part of a learning path focused on industrial automation, robotics, and Industry 4.0 technologies.
-
----
-
-## Portfolio Journey
-
-```
-FlowDesk       → Business Software
-VirtualTank    → SCADA & Modbus TCP
-SensorFlow     → Industrial IoT & MQTT
-LadderLab      → PLC Logic & Control Systems
-RoboFlow       → Robotics (planned)
-AI Vision      → Industrial Computer Vision (planned)
-```
-
----
 
 ## License
 
